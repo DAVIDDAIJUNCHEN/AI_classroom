@@ -188,7 +188,7 @@ if __name__ == '__main__':
     b1 = np.array([[0.4], [0.5]])
     W2 = np.array([[0.9, 0.1]])
     b2 = np.array([[0.5]])
-    disp_iter = 10
+    disp_iter = 100
     total_iter = 10000
 
     for iter in range(total_iter):
@@ -197,4 +197,4 @@ if __name__ == '__main__':
 
         if iter % disp_iter == 0:
             pred = np.array([np.array(y2[i])[0].tolist() for i in range(len(y2))])
-            print('Loss at %s: ' % iter, sum((pred - train_Y)**2))
+            print('Loss at %s step: ' % iter, sum((pred - train_Y)**2)[0])
